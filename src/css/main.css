@@ -1,0 +1,548 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: auto 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+h1 {
+    font-size: 42px;
+    color: rgb(215, 213, 222);
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.regular-text {
+    color: rgb(215, 213, 222);
+    font-size: 20px;
+}
+
+header {
+    position: relative;
+
+    background-image: url('../image/FIRST-IMG.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    padding: 10px;
+}
+
+header::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(22, 8, 61, 0.91);
+    z-index: -1;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.menu-links-items {
+    font-family: 'Bowlby One SC', cursive;
+    list-style-type: none;
+    display: flex;
+    margin: auto auto;
+    align-items: center;
+}
+
+.menu-text {
+    margin-left: 20px;
+}
+
+.menu-links-items li a {
+    text-decoration: none;
+    color: rgb(215, 213, 222);
+}
+
+.menu-links-items li a:hover {
+    color: rgb(0, 224, 208);
+    transition: 0.4s;
+}
+
+
+.menu-links-items-active {
+    color: rgb(0, 224, 208);
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.logo-text {
+    margin: auto 0;
+    padding-left: 10px;
+    font-size: 22px;
+    color: rgb(0, 224, 208);
+}
+
+.header-description {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.blue-hr {
+    background-color: rgb(0, 224, 208);
+    border-radius: 1px;
+    text-decoration: none;
+    max-width: 50px;
+    border: 1px solid rgb(0, 224, 208);
+}
+
+.fpd {
+    margin: 30px auto;
+}
+
+.first-change {
+    margin-top: 90px;
+}
+
+.slides {
+    display: flex;
+    margin-bottom: 100px;
+    margin-top: 80px;
+}
+
+.slider-container {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-item {
+    max-width: 800px;
+}
+
+.slider-btn {
+    margin: auto 10px;
+    z-index: 999;
+    background-color: rgba(215, 213, 222, 0.5);
+    color: rgb(215, 213, 222);
+}
+
+.slider-btn:active {
+    offset: none;
+}
+
+.btn-prev {
+    background-color: rgba(215, 213, 222, 0.5);
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.btn-prev {
+    background-color: rgba(215, 213, 222, 0.5);
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.btn-next {
+    background-color: rgba(215, 213, 222, 0.5);
+    border: none;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.slider-track {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    transition: .5s;
+}
+
+.button {
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    color: rgb(0, 224, 208);
+    padding: 15px;
+    font-size: 13px;
+    border: 2px solid rgb(0, 224, 208);
+    font-family: 'Bowlby One SC', cursive;
+}
+
+.button:hover {
+    background-color: rgba(215, 213, 222, 0.5);
+}
+
+.big-logo {
+    max-height: 240px;
+    height: 100%;
+}
+
+.possibilities {
+    display: flex;
+    justify-content: center;
+    max-width: 875px;
+    margin: 0 auto;
+    padding: 70px;
+}
+
+.possibilities-description {
+    text-align: left;
+    padding-left: 100px;
+}
+
+.possibilities-text {
+    color: rgb(129, 127, 134);
+    font-size: 18px;
+    padding-top: 26px;
+}
+
+.pricing {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../image/PRICING_IMG.png");
+    padding: 100px;
+    z-index: 1;
+}
+
+.pricing-lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing-list {
+    background-color: white;
+    display: block;
+    align-items: center;
+    width: 250px;
+    margin: 20px 20px;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.pricing::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(22, 8, 61, 0.91);
+    z-index: -1;
+}
+
+.pricing-list-name {
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+}
+
+.pricing-list-price {
+    text-align: center;
+    justify-content: center;
+    max-width: 50%;
+    padding: 50px 10px;
+    border-radius: 50%;
+    color: white;
+    border: solid 2px white;
+    margin: 20px auto;
+}
+
+.price {
+    font-size: 25px;
+}
+
+.price-text {
+    justify-content: center;
+    width: 100%;
+}
+
+.pricing-list-privilege {
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.pricing-list-privilege li {
+    margin: 5px;
+}
+
+.gray-hr {
+    background-color: rgba(215, 213, 222, 0.5);
+    border-radius: 1px;
+    text-decoration: none;
+    max-width: 100px;
+    border: 1px solid rgba(215, 213, 222, 0.5);
+}
+
+.pricing-button {
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 13px;
+    font-family: 'Bowlby One SC', cursive;
+    border-radius: 15px;
+}
+
+.pricing-list-1 {
+    border-top: solid 5px teal;
+}
+
+.pricing-button-1:hover {
+    background-color: rgba(215, 213, 222, 0.5);
+    color: teal;
+}
+
+.pricing-button-1 {
+    color: white;
+    border: 2px solid teal;
+    background-color: teal;
+}
+
+.pricing-list-2 {
+    border-top: solid 5px rgb(211, 207, 1);
+}
+
+.pricing-button-2:hover {
+    background-color: rgba(215, 213, 222, 0.5);
+    color: rgb(211, 207, 1);
+}
+
+.pricing-button-2 {
+    color: white;
+    border: 2px solid rgb(211, 207, 1);
+    background-color: rgb(211, 207, 1);
+}
+
+.pricing-list-3 {
+    border-top: solid 5px rgb(241, 3, 63);
+}
+
+.pricing-button-3:hover {
+    background-color: rgba(215, 213, 222, 0.5);
+    color: rgb(241, 3, 63);
+}
+
+.pricing-button-3 {
+    color: white;
+    border: 2px solid rgb(241, 3, 63);
+    background-color: rgb(241, 3, 63);
+}
+
+.pricing-list-price-1 {
+    background-color: teal;
+    box-shadow: 0 0 0 3px teal;
+}
+
+.pricing-list-price-2 {
+    background-color: rgb(211, 207, 1);
+    box-shadow: 0 0 0 3px rgb(211, 207, 1);
+}
+
+.pricing-list-price-3 {
+    background-color: rgb(241, 3, 63);
+    box-shadow: 0 0 0 3px rgb(241, 3, 63);
+}
+
+footer {
+    background-image: url(../image/FOOTER_IMG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 0 30px;
+    max-width: 1300px;
+}
+
+footer::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(22, 8, 61, 0.91);
+    z-index: -1;
+}
+
+.social {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fa-link {
+    font-size: 20px;
+    color: rgb(215, 213, 222);
+    text-decoration: none;
+}
+
+.social-m {
+    margin: auto 2px;
+    max-height: 30px;
+    padding: 4px;
+    border-radius: 50%;
+    border: solid 2px rgb(215, 213, 222);
+}
+
+.footer-adress {
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-foot {
+    color: rgb(215, 213, 222);
+    font-size: 20px;
+}
+
+.adress {
+    margin: 15px;
+}
+
+.agency-text {
+    color: rgb(215, 213, 222);
+    padding: 20px 20px 20px 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+.works-1 {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: solid 3px rgb(129, 127, 134);
+}
+
+.visiting {
+    background-color: rgba(64, 63, 66, 0.8);
+    position: absolute;
+    transition: 1s;
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 10px;
+}
+
+.works-1:hover {
+    cursor: pointer;
+}
+
+.works-1:hover .visiting {
+    display: block;
+    cursor: pointer;
+    bottom: 0;
+    left: 0;
+}
+
+.works-1:hover .visiting {
+    animation: fadein .3s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.works {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.visiting-text {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    padding: 70px 74px 53px 79px;
+    position: absolute;
+    top: 0;
+}
+
+.our-works {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: rgba(250, 249, 253, 0.61);
+}
+
+button:active, button:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.invisible {
+    display: inline;
+}
+

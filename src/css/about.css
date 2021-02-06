@@ -1,0 +1,409 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: auto 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+h1 {
+    font-size: 42px;
+    color: rgb(215, 213, 222);
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.regular-text {
+    color: rgb(149, 149, 149);
+    font-size: 18px;
+}
+
+header {
+    position: fixed;
+
+    background-color: rgba(22, 8, 61, 0.91);
+    background-size: cover;
+    background-position: center;
+
+    padding: 10px;
+    width: 100%;
+    z-index: 999;
+}
+
+.navigation {
+    height: 70px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.menu-links-items {
+    font-family: 'Bowlby One SC', cursive;
+    list-style-type: none;
+    display: flex;
+    margin: auto auto;
+    align-items: center;
+}
+
+.menu-text {
+    margin-left: 20px;
+}
+
+.menu-links-items li a {
+    text-decoration: none;
+    color: rgb(215, 213, 222);
+}
+
+.menu-links-items li a:hover {
+    color: rgb(0, 224, 208);
+    transition: 0.4s;
+}
+
+.menu-links-items-active {
+    color: rgb(0, 224, 208) !important;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.logo-text {
+    margin: auto 0;
+    padding-left: 10px;
+    font-size: 22px;
+    color: rgb(0, 224, 208);
+}
+
+footer {
+    background-image: url(../image/FOOTER_IMG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 0 30px;
+    max-width: 1300px;
+}
+
+footer::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(22, 8, 61, 0.91);
+    z-index: -1;
+}
+
+.social {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fa-link {
+    font-size: 20px;
+    color: rgb(215, 213, 222);
+    text-decoration: none;
+}
+
+.social-m {
+    margin: auto 2px;
+    max-height: 30px;
+    padding: 4px;
+    border-radius: 50%;
+    border: solid 2px rgb(215, 213, 222);
+}
+
+.footer-adress {
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-foot {
+    color: rgb(215, 213, 222);
+}
+
+.adress {
+    margin: 15px;
+}
+
+.agency-text {
+    color: rgb(215, 213, 222);
+    padding: 20px 20px 20px 0;
+    margin: 0;
+}
+
+
+
+.warpper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 2px;
+    background: rgb(22, 8, 61);
+    display: inline-block;
+    color: rgb(0, 224, 208);
+    font-family: 'Bowlby One SC', cursive;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 0.5rem 0.8rem #00000080;
+}
+
+.panels {
+    background: rgb(247, 244, 244);
+    box-shadow: 0 2rem 2rem #00000080;
+    min-height: 200px;
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.panel {
+    display: none;
+    animation: fadein .8s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.radio {
+    display: none;
+}
+
+#one:checked~.panels #one-panel, #two:checked~.panels #two-panel, #three:checked~.panels #three-panel, #four:checked~.panels #four-panel {
+    display: block
+}
+
+#one:checked~.tabs #one-tab, #two:checked~.tabs #two-tab, #three:checked~.tabs #three-tab, #four:checked~.tabs #four-tab {
+    background: rgb(22, 8, 61);
+    color: #fff;
+    border-top: 3px solid #000;
+}
+
+.developers-header {
+    font-size: 45px;
+    color: black;
+    padding: 20px;
+}
+
+
+.developers-place {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.developers-info-panel {
+   
+    max-width: 190px;
+    margin: 10px auto 30px;
+    padding: 2px;
+    box-shadow: 0 0 5px #00000080;
+}
+
+.developer-name {
+    
+    max-width: 180px;
+    text-align: center;
+    margin: 10px auto 10px;
+}
+
+.developers-description {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.developers-description-description {
+    max-width: 800px;
+    float: left;
+    text-align: left;
+    padding-left: 36px;
+    padding-bottom: 36px;
+    
+}
+.developers-description-sign {
+    margin: auto 0;
+    
+}
+
+.dev-sign {
+     font-size: 50px;
+}
+
+.developers-description-social {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    border-left: solid 3px rgb(230, 223, 223);
+    padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 150px;
+  
+}
+
+.developers-social-links {
+    padding-top: 12px;
+    color: black;
+}
+
+.developers-social-links:hover {
+    color: cornflowerblue;
+} 
+
+.dev-nm {
+    margin-bottom: 20px;
+}
+
+.panel-info-first {
+    border-bottom: solid 3px rgb(252, 95, 69) ;
+}
+
+.developer-name-first {
+    color: rgb(252, 95, 69);
+}
+
+.dev-sign-first {
+    color: rgb(252, 95, 69);
+
+}
+
+.panel-info-second {
+    border-bottom: solid 3px rgb(56, 198, 149) ;
+}
+
+.developer-name-second {
+    color: rgb(56, 198, 149);
+}
+
+.dev-sign-second {
+    color: rgb(56, 198, 149);
+
+}
+
+.panel-info-third {
+    border-bottom: solid 3px rgb(178, 124, 245) ;
+}
+
+.developer-name-third {
+    color: rgb(178, 124, 245);
+}
+
+.dev-sign-third {
+    color: rgb(178, 124, 245);
+
+}
+
+.panel-info-fourth {
+    border-bottom: solid 3px rgb(254, 185, 96) ;
+}
+
+.developer-name-fourth {
+    color: rgb(254, 185, 96);
+}
+
+.dev-sign-fourth {
+    color: rgb(254, 185, 96);
+
+}
+
+.select-header {
+    font-size: 45px;
+    color: black;
+    padding: 20px;
+}
+
+.select-content {
+    text-align: center;
+}
+
+.reason {
+    max-width: 300px;
+    font-size: 16px;
+   margin: 20px;
+}
+
+.reason-header-text {
+    font-size: 20px;
+    font-weight: 900;
+    padding-left: 10px;
+}
+
+.reason-header { 
+    display: flex;
+    justify-content: inherit;
+    margin-bottom: 20px
+
+}
+
+.select-reasons-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 40px 0 80px 0;
+}
+
+.fa-phone, .fa-map-marker {
+    color: rgb(215, 213, 222);
+}
+
+

@@ -1,0 +1,396 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: auto 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+h1 {
+    font-size: 42px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.regular-text {
+    color: rgb(149, 149, 149);
+    font-size: 18px;
+}
+
+header {
+    position: fixed;
+    background-color: rgba(22, 8, 61, 0.91);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    width: 100%;
+    z-index: 999;
+}
+
+.navigation {
+    height: 70px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.menu-links-items {
+    font-family: 'Bowlby One SC', cursive;
+    list-style-type: none;
+    display: flex;
+    margin: auto auto;
+    align-items: center;
+}
+
+.menu-text {
+    margin-left: 20px;
+}
+
+.menu-links-items li a {
+    text-decoration: none;
+    color: rgb(215, 213, 222);
+}
+
+.menu-links-items li a:hover {
+    color: rgb(0, 224, 208);
+    transition: 0.4s;
+}
+
+.menu-links-items-active {
+    color: rgb(0, 224, 208) !important;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.logo-text {
+    margin: auto 0;
+    padding-left: 10px;
+    font-size: 22px;
+    color: rgb(0, 224, 208);
+}
+
+footer {
+    background-image: url(../image/FOOTER_IMG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 0 30px;
+    max-width: 1300px;
+}
+
+footer::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(22, 8, 61, 0.91);
+    z-index: -1;
+}
+
+.social {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fa-link {
+    font-size: 20px;
+    color: rgb(215, 213, 222);
+    text-decoration: none;
+}
+
+.social-m {
+    margin: auto 2px;
+    max-height: 30px;
+    padding: 4px;
+    border-radius: 50%;
+    border: solid 2px rgb(215, 213, 222);
+}
+
+.footer-adress {
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-foot {
+    color: rgb(215, 213, 222);
+}
+
+.adress {
+    margin: 15px;
+}
+
+.agency-text {
+    color: rgb(215, 213, 222);
+    padding: 20px 20px 20px 0;
+    margin: 0;
+}
+
+.fa-phone, .fa-map-marker {
+    color: rgb(215, 213, 222);
+}
+
+.pricing {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+    z-index: 1;
+}
+
+.pricing-lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing-list {
+    background: rgb(247, 244, 244);
+    box-shadow: 0 2rem 2rem #00000080;
+    background-color: white;
+    display: block;
+    align-items: center;
+    width: 250px;
+    margin: 20px 20px 30px 20px;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.pricing-list-name {
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+}
+
+.pricing-list-price {
+    text-align: center;
+    justify-content: center;
+    max-width: 50%;
+    padding: 50px 10px;
+    border-radius: 50%;
+    color: white;
+    border: solid 2px white;
+    margin: 20px auto;
+}
+
+.price {
+    font-size: 25px;
+}
+
+.price-text {
+    justify-content: center;
+    width: 100%;
+}
+
+.pricing-list-privilege {
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.pricing-list-privilege li {
+    margin: 5px;
+}
+
+.gray-hr {
+    background-color: rgba(215, 213, 222, 0.5);
+    border-radius: 1px;
+    text-decoration: none;
+    max-width: 100px;
+    border: 1px solid rgba(215, 213, 222, 0.5);
+}
+
+.pricing-button {
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 13px;
+    font-family: 'Bowlby One SC', cursive;
+    border-radius: 15px;
+}
+
+.pricing-list-1 {
+    border-top: solid 5px teal;
+}
+
+.pricing-button-1:hover {
+    background-color: rgba(215, 213, 222, 0.5);
+    color: teal;
+}
+
+.pricing-button-1 {
+    color: white;
+    border: 2px solid teal;
+    background-color: teal;
+}
+
+.pricing-list-2 {
+    border-top: solid 5px rgb(211, 207, 1);
+}
+
+.pricing-list-3 {
+    border-top: solid 5px rgb(241, 3, 63);
+}
+
+.pricing-button-3:hover {
+    background-color: rgba(215, 213, 222, 0.5);
+    color: rgb(241, 3, 63);
+}
+
+.pricing-button-3 {
+    color: white;
+    border: 2px solid rgb(241, 3, 63);
+    background-color: rgb(241, 3, 63);
+}
+
+.pricing-list-price-1 {
+    background-color: teal;
+    box-shadow: 0 0 0 3px teal;
+}
+
+.pricing-list-price-2 {
+    background-color: rgb(211, 207, 1);
+    box-shadow: 0 0 0 3px rgb(211, 207, 1);
+}
+
+.pricing-list-price-3 {
+    background-color: rgb(241, 3, 63);
+    box-shadow: 0 0 0 3px rgb(241, 3, 63);
+}
+
+.contactName {
+    margin: 0 !important;
+}
+
+.contactName, .contactEmail, .contactSubject {
+    margin-top: 30px;
+    height: 30px;
+    padding-left: 5px;
+    color: rgb(132, 132, 132);
+    font-size: 18px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px rgb(206, 206, 206) solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.panels {
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-social {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.contact-message-text {
+    background: rgb(247, 244, 244);
+    width: 450px;
+    height: 170px;
+    resize: none;
+    padding-left: 5px;
+    border: 1px rgb(206, 206, 206) solid;
+    color: rgb(132, 132, 132);
+    font-size: 18px;
+    outline: 0;
+    margin-left: 50px;
+}
+
+.contact {
+    margin-bottom: 70px;
+}
+
+.contact-fields {
+    background: rgb(247, 244, 244);
+    box-shadow: 0 2rem 2rem #00000080;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    display: block;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.button {
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    color: rgb(0, 224, 208);
+    padding: 8px;
+    font-size: 13px;
+    border: 2px solid rgb(0, 224, 208);
+    font-family: 'Bowlby One SC', cursive;
+}
+
+.button:hover {
+    background-color: rgba(215, 213, 222, 0.5);
+}
+
+.contact-send {
+    display: flex;
+    justify-content: center;
+}
